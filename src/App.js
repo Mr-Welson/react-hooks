@@ -1,8 +1,8 @@
 import React from 'react';
 import CountHooks from './pages/CountHooks';
-import CountEffect from './pages/CountEffect';
-import CountEffectClear from './pages/CountEffectClear';
-import CountEffectPerformance from './pages/CountEffectPerformance';
+import EffectHooks from './pages/EffectHooks';
+import EffectClear from './pages/EffectClear';
+import EffectPerformance from './pages/EffectPerformance';
 import HooksRules from './pages/HooksRules';
 import ContextHooks from './pages/ContextHooks';
 import ReducerHooks from './pages/ReducerHooks';
@@ -11,9 +11,9 @@ function App() {
   return (
     <div className="App">
       <CountHooks />
-      <CountEffect />
-      <CountEffectClear />
-      <CountEffectPerformance />
+      <EffectHooks />
+      <EffectClear />
+      <EffectPerformance />
       <HooksRules />
       <ContextHooks />
       <ReducerHooks />
