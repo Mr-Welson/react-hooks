@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import CountHooks from './pages/CountHooks';
+import CountEffect from './pages/CountEffect';
+import CountEffectClear from './pages/CountEffectClear';
+import CountEffectPerformance from './pages/CountEffectPerformance';
+import HooksRules from './pages/HooksRules';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CountHooks />
+      <CountEffect />
+      <CountEffectClear />
+      <CountEffectPerformance />
+      <HooksRules />
     </div>
   );
 }
