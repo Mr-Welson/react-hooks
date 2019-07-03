@@ -23,14 +23,24 @@ import React, { useState, useEffect } from 'react';
 const CountDemo = () => {
   
   const [count, setCount] = useState(2);
+  // 正确
   useEffect(() => {
-    console.log(count)
+    if( count % 2 === 0) {
+      console.log(count + '为偶数')
+    }
   })
 
-  const [status, setStatus] = useState(true);
+  // 错误: 不能再条件里使用 useEffect
+  // if( count % 2 === 0) {
+  //   useEffect(() => {
+  //     console.log(count + '为偶数')
+  //   })
+  // }
+
+  const [countTwo, setCountTwo] = useState(true);
   useEffect(() => {
-    setStatus(count % 2 === 0 ? true : false)
-  }, [count])
+    console.log(countTwo)
+  })
 
   return (
     <div className='container'>
@@ -38,9 +48,9 @@ const CountDemo = () => {
       <button onClick={() => setCount(parseInt(Math.random()*100))}>
         随机数：{ count }
       </button>
-      <p>
-        { status ? '偶数' : '奇数'}
-      </p>
+      <button onClick={() => setCountTwo(parseInt(Math.random()*10))}>
+        随机数：{ countTwo }
+      </button>
     </div>
   )
 }
