@@ -4,6 +4,7 @@ import React, { useReducer } from 'react';
 //  第一个参数为形如 (state, action) => newState 的 reducer，并返回新的 state 及配套的 dispatch 方法
 //  第二个参数为 初始state
 //  第三个参数为可选值, 当 init 存在时, 则第二个参数为 init 方法的参数
+// 如果前后两次的值相同, useReducer 不会更新
 
 const countReducer = (state, action) => {
   switch(action.type) {

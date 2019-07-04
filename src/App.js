@@ -1,5 +1,5 @@
 import React from 'react';
-import CountHooks from './pages/CountHooks';
+import StateHooks from './pages/StateHooks';
 import EffectHooks from './pages/EffectHooks';
 import EffectClear from './pages/EffectClear';
 import EffectPerformance from './pages/EffectPerformance';
@@ -10,7 +10,7 @@ import ReducerHooks from './pages/ReducerHooks';
 function App() {
   return (
     <div className="App">
-      <CountHooks />
+      <StateHooks />
       <EffectHooks />
       <EffectClear />
       <EffectPerformance />
