@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react';
+// 1. useReducer 跟 redux/react-redux 几乎一模一样，但无法使用redux的中间件
 // 1. useReducer接收3个参数，
 //  const [state, dispatch] = useReducer(reducer, initialArg, init);
 //  第一个参数为形如 (state, action) => newState 的 reducer，并返回新的 state 及配套的 dispatch 方法

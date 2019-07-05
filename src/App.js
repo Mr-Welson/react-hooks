@@ -1,11 +1,12 @@
 import React from 'react';
-import StateHooks from './pages/StateHooks';
-import EffectHooks from './pages/EffectHooks';
-import EffectClear from './pages/EffectClear';
-import EffectPerformance from './pages/EffectPerformance';
-import HooksRules from './pages/HooksRules';
-import ContextHooks from './pages/ContextHooks';
-import ReducerHooks from './pages/ReducerHooks';
+import StateHooks from './pages/01_StateHooks';
+import EffectHooks from './pages/02_EffectHooks';
+import EffectClear from './pages/03_EffectClear';
+import EffectPerformance from './pages/04_EffectPerformance';
+import HooksRules from './pages/05_HooksRules';
+import ContextHooks from './pages/06_ContextHooks';
+import ReducerHooks from './pages/07_ReducerHooks';
+import CallbackHooks from './pages/08_CallbackHooks/index';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <HooksRules />
       <ContextHooks />
       <ReducerHooks />
+      <CallbackHooks />
     </div>
   );
 }
