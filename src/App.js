@@ -7,6 +7,8 @@ import HooksRules from './pages/05_HooksRules';
 import ContextHooks from './pages/06_ContextHooks';
 import ReducerHooks from './pages/07_ReducerHooks';
 import CallbackHooks from './pages/08_CallbackHooks/index';
+import MemoHooks from './pages/09_MemoHooks/index';
+import RefHooks from './pages/10_RefHooks/index';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
       <ContextHooks />
       <ReducerHooks />
       <CallbackHooks />
+      <MemoHooks />
+      <RefHooks />
     </div>
   );
 }

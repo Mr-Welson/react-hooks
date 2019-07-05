@@ -4,7 +4,7 @@ import React, { useState, useCallback } from 'react';
 // 2. 同样通过第二个参数可以控制 useCallback 的参数执行时机
 // 3. useCallback 和 PureComponent 或 React.memo 结合使用可以避免不必要的 VDOM 渲染
 // 4. useCallback 和 useMemo 的区别在 MemoHooks 中介绍
-// 5. useCallback(fn, inputs) === useMemo(() => fn, inputs))
+// useCallback(fn, inputs) === useMemo(() => fn, inputs))
 
 
 // React.memo:
@@ -14,6 +14,7 @@ import React, { useState, useCallback } from 'react';
 
 const childStyle={fontSize: 16};
 let count = 0;
+
 const Container = () => {
   const [text, updateText] = useState('');
   const [title, setTitle] = useState('memo按钮');
@@ -26,12 +27,12 @@ const Container = () => {
   
   return (
     <div className='container'>
-      <h2> Callback Hooks </h2>
+      <h2> Callback Hooks (记忆函数) </h2>
       <input
         type="text"
         value={text}
         onChange={(e) => updateText(e.target.value)}
-        placeholder='请输入以触发更新'
+        placeholder='请输入并观察控制台'
       />
       <Child 
         title='普通按钮'
@@ -49,7 +50,7 @@ const Container = () => {
 
 // 父组件 render 时，Child 组件必然 render
 const Child = ({ title, style, onClick }) => {
-  console.log(title, 'render');
+  console.log(title, 're-render');
   return (
     <div style={style}>
       <button onClick={onClick}> {title} </button>

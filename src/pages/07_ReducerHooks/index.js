@@ -8,6 +8,7 @@ import React, { useReducer } from 'react';
 // 如果前后两次的值相同, useReducer 不会更新
 
 const countReducer = (state, action) => {
+  console.log('countReducer 执行');
   switch(action.type) {
     case 'add':
       return state + 1;
@@ -23,7 +24,9 @@ const initCount = (initialCount) => {
 }
 const Container = ({ initialCount = 0}) => {
   // const [count, countDispatch] = useReducer(countReducer, 0);
+  console.log('== render 11 ==')
   const [count, countDispatch] = useReducer(countReducer, initialCount, initCount);
+  console.log('== render 22 ==')
   return (
     <div className='container'>
       <h2> Reducer Hooks </h2>
