@@ -17,19 +17,32 @@ import React, { useState } from 'react';
 // }
 
 const CountDemo = () => {
-  
-  const [count, setCount] = useState(0);
   // const [count, setCount] = useState(() => 0);
+  const [count, setCount] = useState(0);
+  console.log('count==', count);
   return (
     <div className='container'>
       <h2> Counter with State Hooks </h2>
       <p> Count: { count } </p>
+      <i>观察控制台</i>
       <button onClick={() => setCount(count + 1)}>
         添加
       </button>
       <button onClick={() => setCount(c => c - 1)}>
          减少
       </button>
+      <button onClick={
+        () => {
+          setCount(count+1)
+          setCount(count+1)
+        }
+      }> 添加2次</button>
+      <button onClick={
+        () => {
+          setCount(c => c-1)
+          setCount(c => c-1)
+        }
+      }> 减少2次</button>
     </div>
   )
 }

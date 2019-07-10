@@ -7,7 +7,7 @@ import React, { useState, useMemo } from 'react';
 
 const Container = () => {
   const [text, updateText] = useState('');
-  const MemoChild = useMemo(() => {
+  const memoChild = useMemo(() => {
     console.log('useMemo 执行');
     const content = `content: ${text}`
     return <Child content={content} />
@@ -19,7 +19,7 @@ const Container = () => {
     <div className='container'>
       <h2> Memo Hooks (记忆组件) </h2>
       <p>
-        点击按钮不会更新 content
+        点击按钮不会更新 content 组件
         <button
           onClick={() => setCount(count+1)}
         > 点击 { count } 次 </button>
@@ -29,7 +29,7 @@ const Container = () => {
         placeholder='请输入并观察控制台'
         onChange={(e) => updateText(e.target.value)}
       /> 
-      { MemoChild }
+      { memoChild }
     </div>
   )
 }
