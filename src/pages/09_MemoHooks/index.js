@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 // useCallback(fn, inputs) === useMemo(() => fn, inputs)
 // useMemo 和 useCallback 功能类似, 只是用法稍有区别
+// useCallback 返回一个个函数，useMemo 返回函数执行结果
 // 从上述用法可以看到, useCallback不会执行第一个参数，而 useMemo 会执行第一个参数并返回执行结果
 // 所以 useCallback 常用来记忆事件函数, 生成 memoizedFn 传递给子组件
 // useMemo 常用来记忆组件 
